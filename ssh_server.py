@@ -17,12 +17,12 @@ class Server (paramiko.ServerInterface):
         return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
     
     def check_auth_password(self, username, password):
-        if (username == 'flawedspoon') and (password == 'DrPepper23!'):
+        if (username == 'username') and (password == 'password'):
             return paramiko.AUTH_SUCCESSFUL
         
 if __name__ == '__main__':
-    server = '45.93.139.107'
-    ssh_port = 2222
+    server = 'IP ADDRESS'
+    ssh_port = 22
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
